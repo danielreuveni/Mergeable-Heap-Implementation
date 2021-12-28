@@ -17,6 +17,8 @@ public class mergableHeap {
 
     public void insertToSorted(int x) {
         if (flag == 1) {
+            if (l1.contains(x))
+                return;
             if (l1.isEmpty()) {
                 l1.add(x);
             }
@@ -38,6 +40,8 @@ public class mergableHeap {
         }
         }
         if (flag == 2) {
+            if (l2.contains(x))
+                return;
             if (l2.isEmpty()) {
                 l2.add(x);
             }
