@@ -102,11 +102,15 @@ public class ex1 {
         for (int i = 0; i < mh2.get_l1().size(); i++) {
             //insert all the elements from the first list in the second heap to the first list in the first heap
             mh1.set_flag(1);
+            //make sure there is no repetition of the same element twice
+            if (!mh1.get_l1().contains(mh2.get_l1().get(i)))
             mh1.insertToSorted(mh2.get_l1().get(i));
         }
         for (int i = 0; i < mh2.get_l2().size(); i++) {
             //insert all the elements from the second list in the second heap to the second list in the first heap
             mh1.set_flag(2);
+            //make sure there is no repetition of the same element twice
+            if (!mh1.get_l2().contains(mh2.get_l2().get(i)))
             mh1.insertToSorted(mh2.get_l2().get(i));
         }
         return mh1;
