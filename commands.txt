@@ -3,5 +3,6 @@ Insert 8
 Insert 9
 MakeHeap
 Insert 3
+Minimum
 Union
 ExtractMin

@@ -58,6 +58,43 @@ public class mergableHeap {
         
 
     }
+    //get the minimum in the heap (the minimum is the smaller element between the first elements in each linked list)
+    public int getMinimum() {
+        if (!l1.isEmpty() && !l2.isEmpty())
+        return l1.get(0) < l2.get(0) ? l1.get(0) : l2.get(0);
+        else {
+            if (l1.isEmpty())
+                return l2.get(0);
+            else if (l2.isEmpty())
+                return l1.get(0);
+        }
+        return 0;
+    }
+    //pop the minimum from the heap
+    public int extractMinimum() {
+        if (!l1.isEmpty() && !l2.isEmpty()) {
+        int min = l1.get(0) < l2.get(0) ? l1.get(0) : l2.get(0);
+        if (l1.get(0) < l2.get(0))
+            l1.remove(0);
+        else if (l1.get(0) > l2.get(0))
+            l2.remove(0);
+        return min;
+        }
+        else {
+            if (l1.isEmpty()) {
+                int min = l2.get(0);
+                l2.remove(0);
+                return min;
+            }
+            else if (l2.isEmpty()) {
+                int min = l1.get(0);
+                l1.remove(0);
+                return min;
+            }
+        }
+        return 0;
+
+    }
 
     //get the first linked list
     public LinkedList<Integer> get_l1() {
@@ -80,5 +117,17 @@ public class mergableHeap {
         return;
     }
 
+    public void printMergableHeap() {
+        System.out.print("First linked list: ");
+        for (int i = 0; i < l1.size(); i++) {
+            System.out.print(i + ": " + l1.get(i) + "  ");
+        }
+        System.out.print("  ");
+        System.out.print("Second linked list: ");
+        for (int i = 0; i < l2.size(); i++) {
+            System.out.print(i + ": " + l2.get(i) + "  ");
+        }
+        System.out.print("\n");
+    }
 
 }
