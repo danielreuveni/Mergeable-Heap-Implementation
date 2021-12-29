@@ -61,7 +61,7 @@ public class ex1 {
         }
     }
 
-    else if (option1 == 2) {
+        else if (option1 == 2) {
         int j = -1;
         //initialize an empty list of mergable heaps
         List<mergableHeap> mergableHeaps = new ArrayList<mergableHeap>();
