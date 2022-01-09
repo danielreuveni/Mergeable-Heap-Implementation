@@ -19,11 +19,11 @@ Union: We will go through pointers that will start at the head of each list and 
 
 |   | Sorted lists | Unsorted lists  | Unsorted lists and foreign dynamic groups  |
 | ------------- | ------------- | ------------- | ------------- |
-| Make-Heap  | Content Cell  | Content Cell  | Content Cell  |
-| Insert(x)  | Content Cell  | Content Cell  | Content Cell  |
-| Minimum  | Content Cell  | Content Cell  | Content Cell  |
-| Extract-Min  | Content Cell  | Content Cell  | Content Cell  |
-| Union  | Content Cell  | Content Cell  | Content Cell  |
+| Make-Heap  | O(1)  | Content Cell  | Content Cell  |
+| Insert(x)  | O(n)  | Content Cell  | Content Cell  |
+| Minimum  | O(1)  | Content Cell  | Content Cell  |
+| Extract-Min  | O(n)  | Content Cell  | Content Cell  |
+| Union  | Θ(n)  | Content Cell  | Content Cell  |
 
 		|Unsorted lists |Unsorted lists and foreign dynamic groups
 Make-Heap	O(1)	O(1)	O(1)
