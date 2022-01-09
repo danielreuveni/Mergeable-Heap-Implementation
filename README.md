@@ -25,10 +25,5 @@ Union: We will go through pointers that will start at the head of each list and 
 | Extract-Min  | O(n)  | Content Cell  | Content Cell  |
 | Union  | Θ(n)  | Content Cell  | Content Cell  |
 
-		|Unsorted lists |Unsorted lists and foreign dynamic groups
-Make-Heap	O(1)	O(1)	O(1)
-Insert(x)	O(n)		
-Minimum	O(1)		
-Extract-Min	O(n)		
-Union	Θ(n)		
+	
 
