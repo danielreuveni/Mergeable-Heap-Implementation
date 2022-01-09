@@ -16,7 +16,22 @@ Extract-Min: Continuing from the previous section, we will delete the minimum el
 Union: We will go through pointers that will start at the head of each list and put each element in the appropriate place to maintain the sorted order ratio. Each element will be placed in the appropriate place in each of the two lists in the new heap. Time complexity: Θ(n).
 
 
-	Sorted lists	|Unsorted lists |Unsorted lists and foreign dynamic groups
+
+| First Header  | Second Header | First Header  | Second Header |
+| ------------- | ------------- | ------------- | ------------- |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| ------------- | ------------- | ------------- | ------------- |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| ------------- | ------------- | ------------- | ------------- |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| ------------- | ------------- | ------------- | ------------- |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| ------------- | ------------- | ------------- | ------------- |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| ------------- | ------------- | ------------- | ------------- |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+
+		|Unsorted lists |Unsorted lists and foreign dynamic groups
 Make-Heap	O(1)	O(1)	O(1)
 Insert(x)	O(n)		
 Minimum	O(1)		
