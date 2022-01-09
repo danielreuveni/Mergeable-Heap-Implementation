@@ -5,7 +5,7 @@ Insert(x), Minimum, Extract-Min, Union, Make-heap.
 We implement mergeable heap in three ways:
 1.	The lists are sorted.
 2.	The lists are not sorted.
-3.	The lists are not sorted, and the dynamic groups to be merged are foreign.
+3.	The lists are not sorted, and the dynamic sets to be merged are foreign.
 
 
 Make-Heap function is uniform for all sections. This function create two empty linked lists. Time complexity: O(1).
@@ -17,7 +17,7 @@ Union: We will go through pointers that will start at the head of each list and 
 
 
 
-|   | Sorted lists | Unsorted lists  | Unsorted lists and foreign dynamic groups  |
+|   | Sorted lists | Unsorted lists  | Unsorted lists and foreign dynamic sets  |
 | ------------- | ------------- | ------------- | ------------- |
 | Make-Heap  | O(1)  | Content Cell  | Content Cell  |
 | Insert(x)  | O(n)  | Content Cell  | Content Cell  |
