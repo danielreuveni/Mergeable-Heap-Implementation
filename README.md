@@ -18,6 +18,7 @@ Union: We will go through pointers that will start at the head of each list and 
 
 
 |   | Sorted lists | Unsorted lists  | Unsorted lists and foreign dynamic groups  |
+| ------------- | ------------- | ------------- | ------------- |
 | Make-Heap  | Content Cell  | Content Cell  | Content Cell  |
 | Insert(x)  | Content Cell  | Content Cell  | Content Cell  |
 | Minimum  | Content Cell  | Content Cell  | Content Cell  |
