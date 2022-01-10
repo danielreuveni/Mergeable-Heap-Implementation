@@ -26,15 +26,16 @@ Union: We will go through pointers that will start at the head of each list resp
 
 In the second way:
 
-In general, to maintain the efficiency of the insertion operation and get it running at a constant time, we will allow duplications within each list (If we do not allow duplicates, we will need to check if the element already exists within the list, using contains function that runs in linear time). The general structure of each list in this section will be as follows: At the head of each list the minimum element will be retained each time, and if there are duplicates of that element, they will appear after it in the list. The rest of the elements will then be kept in the list in no sorted order.
+In general, to maintain the efficiency of the insertion operation and get it running at a constant time, we will allow duplications within each list (If we do not allow duplicates, we will need to check if the element already exists within the list, using contains function that runs in linear time). The general structure of each list in this section will be as follows: At the head of each list the minimum element will be retained each time, and if there are duplicates of that element, they will appear in the rest of the list. The rest of the elements will then be kept in the list in no sorted order.
 
-Insert(x): We must distinguish between two cases: Whether the element we want to insert is the minimum (we can check this by constant operations of comparison between the two elements at the head of the two lists), or whether the element is not minimal. If the element is minimal, we will insert it at the head of the list. If not, we insert it to the end of the list. Time complexity of this operation will cost O(1) instead of O(n).
+Insert(x): We must distinguish between two cases: Whether the element we want to insert is the minimum (we can check this by constant operations of comparison between the two elements at the head of the two lists), or whether the element is not minimal. If the element is minimal, we will insert it at the head of the list. If not, we insert it to the end of the list. If it is the same minimal element, we insert it to the head of the list. Time complexity of this operation will cost O(1) instead of O(n).
 
 Minimum: As explained above, the minimum element will be saved at the head of the list, so we will simply return it at a constant cost. Time complexity: O(1).
 
 Extract-Min: If there is one minimal element, we simply remove it from the head of the list and return it. If there are duplicates of the minimal element, we remove it and all its duplicates. After this, we search the minimal element in the new list in linear time and save it in the head of the list. Time complexity: O(n) in worst case.
 
-Union: We will go through pointers that will start at the head of each list respectively and put each element in the appropriate place to maintain the sorted order ratio. Each element will be placed in the appropriate place in each of the two lists in the new heap. Time complexity: Θ(n).
+Union: In order to unify the two heaps, we will need to unify each list respectively and find the minimum of each of the two matching lists in the two heaps, and insert it at the head of the new list and its copies if any. We will insert the other elements one after the other in linear time, as stated without maintaining a sorted order. Time complexity: Θ(n).
+
 
 
 |   | Sorted lists | Unsorted lists  | Unsorted lists and foreign dynamic sets  |
