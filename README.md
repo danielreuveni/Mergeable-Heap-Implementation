@@ -41,10 +41,10 @@ Extract-Min: If there is one minimal element, we simply remove it from the head 
 
 Union: In order to unify the two heaps, we will need to unify each list respectively and find the minimum of each of the two matching lists in the two heaps, and insert it at the head of the new list and its copies if any. We will insert the other elements one after the other in linear time, as stated without maintaining a sorted order. Time complexity: Θ(n).
 
-![image](https://user-images.githubusercontent.com/73079447/148773635-08769da0-ea24-43cd-b253-0fe7e3746709.png)
+![image](https://user-images.githubusercontent.com/73079447/148773792-cc4fb0a6-dea5-43e9-bc41-8d4132628169.png)
 
+![image](https://user-images.githubusercontent.com/73079447/148773821-88bdfded-fa9d-48b0-a5a3-f98347759b3b.png)
 
-![image](https://user-images.githubusercontent.com/73079447/148773617-7ed1a150-3908-4b5c-a992-676938748beb.png)
 
 
 |   | Sorted lists | Unsorted lists  | Unsorted lists and foreign dynamic sets  |
