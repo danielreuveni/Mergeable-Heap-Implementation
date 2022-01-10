@@ -1,6 +1,6 @@
 # Mergeable-Heap-Implementation
 
-In this project we need to implement a mergeable heap using linked lists. Mergeable heap support in these functions: 
+In this project we need to implement a mergeable heap using linked lists. Mergeable heap supports in these functions: 
 Insert(x), Minimum, Extract-Min, Union, Make-heap.
 We implement mergeable heap in three ways:
 1.	The lists are sorted.
