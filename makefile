@@ -1,3 +1,3 @@
 make:
-	javac *.javac
+	javac *.java
 	java ex1

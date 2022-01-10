@@ -14,7 +14,7 @@ public class mergableHeap {
         l2 = new LinkedList<Integer>();
         flag = 1;
     }
-
+    //insert element to the heap in order to keep the sort of the struct
     public void insertToSorted(int x) {
         if (flag == 1) {
             if (l1.contains(x))
@@ -74,7 +74,7 @@ public class mergableHeap {
         }
         return 0;
     }
-    //pop the minimum from the heap
+    //pop the minimum from the heap in sorted lists
     public int extractMinimum() {
         if (!l1.isEmpty() && !l2.isEmpty()) {
         int min = l1.get(0) < l2.get(0) ? l1.get(0) : l2.get(0);
@@ -98,6 +98,119 @@ public class mergableHeap {
         }
         return 0;
 
+    }
+    //insert element to the heap in order to represent the heap by array / linked list and kept the minimal element in the head of the list
+    public void insertToNotSorted(int x) {
+        if (flag == 1) {
+            if (l1.isEmpty()) {
+                l1.add(x);
+            }
+            else {
+                if (l1.get(0) >= x) {
+                    int y = l1.get(0);
+                    l1.set(0, x);  
+                    l1.add(y);
+                }
+                else {
+                    l1.add(x);
+                }
+            
+        }
+    }
+    if (flag == 2) {
+        if (l2.isEmpty()) {
+            l2.add(x);
+        }
+        else {
+            if (l2.get(0) >= x) {
+                int y = l2.get(0);
+                l2.set(0, x);  
+                l2.add(y);
+            }
+            else {
+                l2.add(x);
+            }
+        
+    }
+}
+    return;
+    }
+
+    //pop the minimum from the heap in unsorted lists
+    public int extractMinimum_2() {
+        if (!l1.isEmpty() && !l2.isEmpty()) {
+            int min = l1.get(0) < l2.get(0) ? l1.get(0) : l2.get(0);
+            if (l1.get(0) <= l2.get(0)) {
+                int temp = l1.get(0);
+                for (int i = 0; i < l1.size(); i++) {
+                    if (l1.get(i) == temp)
+                    //remove the minimal element in the first list and all its duplicates
+                        l1.remove(i);
+                }
+                for (int i = 0; i < l2.size(); i++) {
+                    if (l2.get(i) == temp)
+                    //remove the minimal element in the second list and all its duplicates
+                        l2.remove(i);
+                }
+            }
+            else if (l1.get(0) >= l2.get(0)) {
+                int temp = l2.get(0);
+                for (int i = 0; i < l2.size(); i++) {
+                    if (l2.get(i) == temp)
+                    //remove the minimal element in the second list and all its duplicates
+                        l2.remove(i);
+                }
+                for (int i = 0; i < l1.size(); i++) {
+                    if (l1.get(i) == temp)
+                    //remove the minimal element in the first list and all its duplicates
+                        l1.remove(i);
+                }
+            }
+            
+            int new_min_1 = l1.get(0);
+            int new_min_2 = l2.get(0);
+            int k1 = 0;
+            int k2 = 0;
+            //find the new minimal element and put it in the head of each list
+            for (int i = 0; i < l1.size(); i++) {
+                if (l1.get(i) < new_min_1)
+                    new_min_1 = l1.get(i);
+                    k1 = i;
+            }
+            l1.remove(k1);
+            l1.add(0, new_min_1);
+            for (int i = 0; i < l2.size(); i++) {
+                if (l2.get(i) < new_min_2)
+                    new_min_2 = l2.get(i);
+                    k2 = i;
+            }
+            l2.remove(k2);
+            l2.add(0, new_min_2);
+            //System.out.println(new_min_1);
+            return min;
+            }
+            else {
+                if (l1.isEmpty()) {
+                    int min = l2.get(0);
+                    for (int i = 0; i < l2.size(); i++) {
+                        if (l2.get(i) == min)
+                        //remove the minimal element in the list and all its duplicates
+                            l2.remove(i);
+                    }
+                    return min;
+                }
+                else if (l2.isEmpty()) {
+                    int min = l1.get(0);
+                    for (int i = 0; i < l1.size(); i++) {
+                        if (l1.get(i) == min)
+                        //remove the minimal element in the list and all its duplicates
+                            l1.remove(i);
+                    }
+                    return min;
+                }
+            }
+            return 0;
+    
     }
 
     //get the first linked list
