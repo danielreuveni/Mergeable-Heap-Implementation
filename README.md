@@ -13,7 +13,7 @@ Make-Heap function is uniform for all sections. This function create two empty l
 In the first way:
 
 In this way, each list represents the elements in sorted order.
-Insert(x): Each time we insert the x into one of the two lists alternately. During the insertion we will go through the members of the list in a linear scan and find the position of x. If x is larger than all the elements of the list, we will insert it at the end of the list. Time complexity of this operation will cost O(n) at worst.
+Insert(x): Each time we insert the x into one of the two lists alternately. During the insertion we will go through the elements of the list in a linear scan and find the position of x. If x is larger than all the elements of the list, we will insert it at the end of the list. Time complexity of this operation will cost O(n) at worst.
 
 Minimum: Since each list is sorted, necessarily the minimum member in each list is located at the head of the list. Therefore, we will return the minimum between them. Time complexity: O(1).
 
