@@ -51,6 +51,26 @@ Running example:
 
 ![image](https://user-images.githubusercontent.com/73079447/148773821-88bdfded-fa9d-48b0-a5a3-f98347759b3b.png)
 
+In the third way:
+
+In this way, we will need to make sure that each inserted element does not exist at all in the heap: in the first list and in the second list. If we unify two heaps, we need to make sure that there are not any duplicates in the new heap. This assumption will require us to use in the contains function that runs in linear time. Beyond that, the logic by which we will implement the structure in this section will be similar to the one we implemented in the previous section.
+
+Insert(x): Since we have to save the minimum element at the head of the list, we use the insertion logic we implemented in the previous section. The only difference in this implementation, is that we must make sure there are no duplicates when inserting an element, unlike the previous section where we allowed this. We use the contains() built-in function, that runs in linear time. Time complexity: O(n).
+
+Minimum: Like the implementation in the previous section. Time complexity: O(1).
+
+Extract-Min: We simply remove and return the first element, and search the new minimal element in linear scan. Time complexity: O(n).
+
+Union: Like the implementation in the previous section, except for the principle in this section we will not allow duplications Time complexity: Θ(n).
+
+The commands:
+
+![image](https://user-images.githubusercontent.com/73079447/148821748-b2ba720c-77e3-4c25-b747-4436b0cda1e5.png)
+
+Running example:
+
+![image](https://user-images.githubusercontent.com/73079447/148821766-4dcb9533-513b-4d79-8b84-138001e65ee8.png)
+
 
 In conclusion:
 
