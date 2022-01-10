@@ -57,9 +57,9 @@ In conclusion:
 |   | Sorted lists | Unsorted lists  | Unsorted lists and foreign dynamic sets  |
 | ------------- | ------------- | ------------- | ------------- |
 | Make-Heap  | O(1)  | O(1)  | O(1)  |
-| Insert(x)  | O(n)  | O(1)  | Content Cell  |
-| Minimum  | O(1)  | O(1)  | Content Cell  |
-| Extract-Min  | O(1)  | O(n)  | Content Cell  |
+| Insert(x)  | O(n)  | O(1)  | O(n)  |
+| Minimum  | O(1)  | O(1)  | O(1)  |
+| Extract-Min  | O(1)  | O(n)  | O(n)  |
 | Union  | Θ(n)  | Θ(n)  | Θ(n)  |
 
 	
