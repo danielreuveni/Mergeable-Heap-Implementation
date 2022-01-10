@@ -24,6 +24,7 @@ Extract-Min: Continuing from the previous section, we will delete the minimum el
 Union: We will go through pointers that will start at the head of each list respectively and put each element in the appropriate place to maintain the sorted order ratio. Each element will be placed in the appropriate place in each of the two lists in the new heap. Time complexity: Θ(n).
 
 
+![image](https://user-images.githubusercontent.com/73079447/148773571-c7780277-e7e0-4650-95c3-b3ce6ece1009.png)
 
 
 ![image](https://user-images.githubusercontent.com/73079447/148728713-0602c81f-7872-4f5d-99e1-95837599c543.png)
@@ -40,7 +41,10 @@ Extract-Min: If there is one minimal element, we simply remove it from the head 
 
 Union: In order to unify the two heaps, we will need to unify each list respectively and find the minimum of each of the two matching lists in the two heaps, and insert it at the head of the new list and its copies if any. We will insert the other elements one after the other in linear time, as stated without maintaining a sorted order. Time complexity: Θ(n).
 
+![image](https://user-images.githubusercontent.com/73079447/148773635-08769da0-ea24-43cd-b253-0fe7e3746709.png)
 
+
+![image](https://user-images.githubusercontent.com/73079447/148773617-7ed1a150-3908-4b5c-a992-676938748beb.png)
 
 
 |   | Sorted lists | Unsorted lists  | Unsorted lists and foreign dynamic sets  |
