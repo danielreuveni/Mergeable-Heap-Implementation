@@ -59,7 +59,7 @@ In conclusion:
 | Make-Heap  | O(1)  | O(1)  | O(1)  |
 | Insert(x)  | O(n)  | O(1)  | O(n)  |
 | Minimum  | O(1)  | O(1)  | O(1)  |
-| Extract-Min  | O(1)  | O(n)  | O(n)  |
+| Extract-Min  | O(1)  | O(n)  | O(1)  |
 | Union  | Θ(n)  | Θ(n)  | Θ(n)  |
 
 	
