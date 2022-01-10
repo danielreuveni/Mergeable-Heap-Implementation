@@ -1,3 +1,5 @@
+//Daniel Reuveni
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.Scanner;
@@ -110,8 +112,76 @@ public class ex1 {
 
     }
 
+        else if (option1 == 3) {
+        int j = -1;
+        //initialize an empty list of mergable heaps
+        List<mergableHeap> mergableHeaps = new ArrayList<mergableHeap>();
+
+        for (int i = 0; i < commands.length; i++) {
+             //create an empty heap in O(1)
+            if (commands[i].equals("MakeHeap")) {
+                j++;
+                //call to the constructor of the mergable heap and add it to the list
+                mergableHeap mh = new mergableHeap();
+                mergableHeaps.add(mh);
+            }
+            
+            //insert the element to the heap (one of two linked lists) in O(n) 
+            if (commands[i].split(" ")[0].equals("Insert")) {
+                int x = Integer.parseInt(commands[i].split(" ")[1]);
+                mergableHeaps.get(j).insertToNotSortedAndForeign(x);     
+                if (mergableHeaps.get(j).get_flag() == 1) 
+                    mergableHeaps.get(j).set_flag(2);
+                else if (mergableHeaps.get(j).get_flag() == 2)
+                    mergableHeaps.get(j).set_flag(1);
+
+            }
+            
+            //get the minimal element in heap in O(1)
+            if (commands[i].equals("Minimum")) {
+                System.out.println("Minimum: " + mergableHeaps.get(j).getMinimum());
+            }
+            
+            //extract the minimum in the heap in O(n)
+            if (commands[i].equals("ExtractMin")) {
+                System.out.println("ExtractMin: " + mergableHeaps.get(j).extractMinimum_3());
+            }
+            //union the two heaps
+            if (commands[i].equals("Union")) {
+                union_3(mergableHeaps.get(j-1), mergableHeaps.get(j));
+                mergableHeaps.remove(j);
+                j--;
+            }
+            //print the heaps
+            for (int k = 1; k <mergableHeaps.size() + 1; k++) {
+                System.out.println("The " + k + " mergable heap:");
+                mergableHeaps.get(k-1).printMergableHeap();
+                }
+        }
 
     }
+
+
+    }
+    public static mergableHeap union_3(mergableHeap mh1, mergableHeap mh2) {
+        for (int i = 0; i < mh2.get_l1().size(); i++) {
+            //insert all the elements from the first list in the second heap to the first list in the first heap
+            mh1.set_flag(1);
+            //make sure there are not duplicates in the bew heap
+            if (!(mh1.get_l1().contains(mh2.get_l1().get(i))) && !(mh1.get_l2().contains(mh2.get_l1().get(i))))
+            mh1.insertToNotSorted(mh2.get_l1().get(i));
+        }
+        for (int i = 0; i < mh2.get_l2().size(); i++) {
+            //insert all the elements from the second list in the second heap to the second list in the first heap
+            mh1.set_flag(2);
+            //make sure there are not duplicates in the bew heap
+            if (!(mh1.get_l1().contains(mh2.get_l2().get(i))) && !(mh1.get_l2().contains(mh2.get_l2().get(i))))
+            mh1.insertToNotSorted(mh2.get_l2().get(i));
+        }
+        return mh1;
+    }
+
+
     public static mergableHeap union_2(mergableHeap mh1, mergableHeap mh2) {
         for (int i = 0; i < mh2.get_l1().size(); i++) {
             //insert all the elements from the first list in the second heap to the first list in the first heap
