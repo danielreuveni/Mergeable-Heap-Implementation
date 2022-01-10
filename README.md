@@ -13,13 +13,15 @@ Make-Heap function is uniform for all sections. This function create two empty l
 In the first way:
 
 In this way, each list represents the elements in sorted order.
+
 Insert(x): Each time we insert the x into one of the two lists alternately. During the insertion we will go through the elements of the list in a linear scan and find the position of x. If x is larger than all the elements of the list, we will insert it at the end of the list. Time complexity of this operation will cost O(n) at worst.
 
 Minimum: Since each list is sorted, necessarily the minimum member in each list is located at the head of the list. Therefore, we will return the minimum between them. Time complexity: O(1).
 
-Extract-Min: Continuing from the previous section, we will delete the minimum element from the two lists and move element limb one step to the left. Time complexity: O(n) in worst case.
+Extract-Min: Continuing from the previous section, we will delete the minimum element from the two lists. Time complexity: O(1).
 
 Union: We will go through pointers that will start at the head of each list respectively and put each element in the appropriate place to maintain the sorted order ratio. Each element will be placed in the appropriate place in each of the two lists in the new heap. Time complexity: Θ(n).
+
 
 
 ![image](https://user-images.githubusercontent.com/73079447/148728713-0602c81f-7872-4f5d-99e1-95837599c543.png)
@@ -43,7 +45,7 @@ Union: In order to unify the two heaps, we will need to unify each list respecti
 | Make-Heap  | O(1)  | O(1)  | O(1)  |
 | Insert(x)  | O(n)  | O(1)  | Content Cell  |
 | Minimum  | O(1)  | O(1)  | Content Cell  |
-| Extract-Min  | O(n)  | O(n)  | Content Cell  |
+| Extract-Min  | O(1)  | O(n)  | Content Cell  |
 | Union  | Θ(n)  | Θ(n)  | Θ(n)  |
 
 	
