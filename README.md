@@ -40,11 +40,11 @@ Union: In order to unify the two heaps, we will need to unify each list respecti
 
 |   | Sorted lists | Unsorted lists  | Unsorted lists and foreign dynamic sets  |
 | ------------- | ------------- | ------------- | ------------- |
-| Make-Heap  | O(1)  | Content Cell  | Content Cell  |
-| Insert(x)  | O(n)  | Content Cell  | Content Cell  |
-| Minimum  | O(1)  | Content Cell  | Content Cell  |
-| Extract-Min  | O(n)  | Content Cell  | Content Cell  |
-| Union  | Θ(n)  | Content Cell  | Content Cell  |
+| Make-Heap  | O(1)  | O(1)  | O(1)  |
+| Insert(x)  | O(n)  | O(1)  | Content Cell  |
+| Minimum  | O(1)  | O(1)  | Content Cell  |
+| Extract-Min  | O(n)  | O(n)  | Content Cell  |
+| Union  | Θ(n)  | Θ(n)  | Θ(n)  |
 
 	
 
