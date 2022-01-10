@@ -7,6 +7,7 @@ We implement mergeable heap in three ways:
 2.	The lists are not sorted.
 3.	The lists are not sorted, and the dynamic sets to be merged are foreign.
 
+The program read the commands from commands.txt.
 
 Make-Heap function is uniform for all sections. This function create two empty linked lists. Time complexity: O(1).
 
@@ -24,6 +25,7 @@ Union: We will go through pointers that will start at the head of each list resp
 
 
 
+
 ![image](https://user-images.githubusercontent.com/73079447/148728713-0602c81f-7872-4f5d-99e1-95837599c543.png)
 
 In the second way:
@@ -34,9 +36,10 @@ Insert(x): We must distinguish between two cases: Whether the element we want to
 
 Minimum: As explained above, the minimum element will be saved at the head of the list, so we will simply return it at a constant cost. Time complexity: O(1).
 
-Extract-Min: If there is one minimal element, we simply remove it from the head of the list and return it. If there are duplicates of the minimal element, we remove it and all its duplicates. After this, we search the minimal element in the new list in linear time and save it in the head of the list. Time complexity: O(n) in worst case.
+Extract-Min: If there is one minimal element, we simply remove it from the head of the list and return it. If there are duplicates of the minimal element, we remove it and all its duplicates from the two lists. After this, we search the minimal element in the new list in linear time and save it in the head of the list. Time complexity: O(n) in worst case.
 
 Union: In order to unify the two heaps, we will need to unify each list respectively and find the minimum of each of the two matching lists in the two heaps, and insert it at the head of the new list and its copies if any. We will insert the other elements one after the other in linear time, as stated without maintaining a sorted order. Time complexity: Θ(n).
+
 
 
 
