@@ -41,7 +41,7 @@ Minimum: As explained above, the minimum element will be saved at the head of th
 
 Extract-Min: If there is one minimal element, we simply remove it from the head of the list and return it. If there are duplicates of the minimal element, we remove it and all its duplicates from the two lists. After this, we search the minimal element in the new list in linear time and save it in the head of the list. Time complexity: O(n) in worst case.
 
-Union: In order to unify the two heaps, we will need to unify each list respectively and find the minimum of each of the two matching lists in the two heaps, and insert it at the head of the new list and its copies if any. We will insert the other elements one after the other in linear time, as stated without maintaining a sorted order. Time complexity: Θ(n).
+Union: In order to unify the two heaps, we will need to unify each list respectively and find the minimum of each of the two matching lists in the two heaps and insert it at the head of the new list and its copies if any. We will insert the other elements one after the other in linear time, as stated without maintaining a sorted order. Time complexity: Θ(n).
 
 The commands:
 
